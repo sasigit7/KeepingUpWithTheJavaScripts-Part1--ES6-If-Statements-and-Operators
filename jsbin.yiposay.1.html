@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<!--
+Created using JS Bin
+http://jsbin.com
+
+Copyright (c) 2019 by sasigit7 (http://jsbin.com/yiposay/1/edit)
+
+Released under the MIT license: http://jsbin.mit-license.org
+-->
+<meta name="robots" content="noindex">
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+</head>
+<body>
+
+<script id="jsbin-javascript">
+// Keeping Up With JavaScripts- Part1: ES6 @HomeWork Assignment#3: If Statements and Operators
+
+//Exercise-1: Logical Argument (a Syllogism) 
+/* 
+  Using "if statements" and any other logical operators and data-types you see fit, recreate this logical argument.
+  Your code should make clear that "socrates" is part of a collection of items referred to as "men", and that all 
+  members of this collection are mortal. You should also then demonstrate that since Socrates is part of this collection,
+  it follows that he is mortal as well.
+  
+  All men are mortal 
+  Socrates is a man.
+  Therefore, socrates is mortal
+*/
+
+const men = ["plato", "xenophan", "shashi", "socrates"]; // "socrates" is part of collection of members referred to as "men".
+const areMembersMortal = true; // All members of this collection are mortal. 
+const man = "socrates"; // Socrates is a man and mortal too.
+
+if(areMembersMortal) { // similar to (areMembersMortal === true)
+  console.log("All men are mortal."); // Outputs "All men are mortal" as the expression "areMembersMortal is true".
+} else{
+  console.log("All men are not mortal.");
+} 
+
+
+if ((men.indexOf(man) && areMembersMortal) || man === "shashi") { // Used logical AND/OR operators to evaluate both expressions. 
+  console.log("socrates is a man."); // Since socrates is part of collection of men, obviously, he is a man. 
+  console.log("Therefore, socrates is mortal."); // Since all men are mortal, socrates is mortal too.
+}  else {
+  console.log("socrates is not a man nor a mortal");
+}
+
+
+//Extra Credit:
+//Exercise-2: Logical Argument (a Syllogism) 
+/* 
+ This cake is either vanilla or chocolate.
+ This cake is not chocolate.
+ Therefore, this cake is vanilla.
+*/
+const cakes = ["vanilla", "chocolate"]; // A cakes Array with two flavours, vanilla and chocolate. 
+const cake = "vanilla"; // Assume, the cake is Vanilla. 
+
+if((cake === cakes[0]) || (cake === cakes[1])) { // This cake is either vanilla or chocolate. 
+   if(cake !== cakes[1]) { // This cake is not chocolate.
+     console.log("Therefore, this cake is " + cake); // Therefore, this cake is vanilla. 
+   }
+}
+
+
+
+
+
+
+</script>
+</body>
+</html>
